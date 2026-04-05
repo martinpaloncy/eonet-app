@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base ── */
+body {
+  background: #050a14;
+  color: #f0f2f5;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.3);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* ── MapLibre popup ── */
+.maplibregl-popup-content {
+  background: rgba(8, 13, 24, 0.92) !important;
+  backdrop-filter: blur(16px) saturate(1.4) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(1.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  border-radius: 12px !important;
+  padding: 12px 16px !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55) !important;
+  color: #f0f2f5 !important;
+}
+.maplibregl-popup-tip {
+  border-color: transparent !important;
+  display: none !important;
+}
+
+/* ── MapLibre nav controls ── */
+.maplibregl-ctrl-group {
+  background: rgba(10, 15, 26, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35) !important;
+  overflow: hidden;
+}
+.maplibregl-ctrl-group button {
+  width: 34px !important;
+  height: 34px !important;
+  border: none !important;
+}
+.maplibregl-ctrl-group button + button {
+  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+.maplibregl-ctrl-group button span {
+  filter: invert(1) brightness(0.6) !important;
+  transition: filter 0.15s !important;
+}
+.maplibregl-ctrl-group button:hover span {
+  filter: invert(1) brightness(1) !important;
+}
+
+/* ── MapLibre attribution ── */
+.maplibregl-ctrl-attrib {
+  background: rgba(5, 10, 20, 0.5) !important;
+  color: rgba(255, 255, 255, 0.15) !important;
+  font-size: 10px !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+.maplibregl-ctrl-attrib a {
+  color: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* ── Sidebar dot grid ── */
+.sidebar-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
